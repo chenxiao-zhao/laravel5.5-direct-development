@@ -167,12 +167,12 @@ return [
         /*
          * Package Service Providers...
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
-        Way\Generators\GeneratorsServiceProvider::class,
-        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        Orangehill\Iseed\IseedServiceProvider::class,
-        Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
+        //Barryvdh\Debugbar\ServiceProvider::class,
+        //Way\Generators\GeneratorsServiceProvider::class,
+        //Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
+        //Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        //Orangehill\Iseed\IseedServiceProvider::class,
+        //Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Reliese\Coders\CodersServiceProvider::class,
         /*
