@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t swedavia-airport-api -f ./Dockerfile .
+docker build -t laravel5.5-direct-development -f ./Dockerfile .

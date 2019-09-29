@@ -23,5 +23,3 @@ Route::group(['middleware' => 'jwt.auth'],function(){
 
     Route::get('/logout','Api\AccountController@logout');
 });
-Route::get('/camera','Api\DataController@camera');
-Route::get('/data','Api\DataController@data');
