@@ -33,7 +33,7 @@ The system was tested on Docker version 17.09.1-ce, build 19e2cf6.
 ### Step 1 - Load docker image
 
 ```sh
-$ wget http://file.achang.tech/China/Package/north-point/last/laravel5.5-direct-development/laravel5.5-direct-development_${VERSION}_docker_amd64.tar.gz
+$ wget http://file.achang.tech/Package/last/laravel5.5-direct-development/laravel5.5-direct-development_${VERSION}_docker_amd64.tar.gz
 $ tar -xzvf laravel5.5-direct-development_${VERSION}_docker_amd64.tar.gz
 $ sudo docker load --input laravel5.5-direct-development_${VERSION}_docker_amd64.tar
 ```
