@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "eba99ca5-7538-4bc9-b1d5-09cfaf9f3bf7",
+		"name": "laravel5.5-direct-development",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://laravel5.5-direct-development.dev/api/AesEncrypt?code=xjtu123456",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel5.5-direct-development.dev/api/AesEncrypt?code=xjtu123456",
+					"protocol": "http",
+					"host": [
+						"laravel5",
+						"5-direct-development",
+						"dev"
+					],
+					"path": [
+						"api",
+						"AesEncrypt"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "xjtu123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://laravel5.5-direct-development.dev/api/AesDecrypt?code=6f62466245373550732b795a764a7170543734414b413d3d",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://laravel5.5-direct-development.dev/api/AesDecrypt?code=6f62466245373550732b795a764a7170543734414b413d3d",
+					"protocol": "http",
+					"host": [
+						"laravel5",
+						"5-direct-development",
+						"dev"
+					],
+					"path": [
+						"api",
+						"AesDecrypt"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "6f62466245373550732b795a764a7170543734414b413d3d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://laravel5.5-direct-development.dev/api/v1/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "e10adc3949ba59abbe56e057f20f883e",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dev@deepnorth.cn",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel5.5-direct-development.dev/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"laravel5",
+						"5-direct-development",
+						"dev"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://laravel5.5-direct-development.dev/api/v1/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "cxzhao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "D11pN0rth4ever!",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "11@deepnorth.cn",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel5.5-direct-development.dev/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"laravel5",
+						"5-direct-development",
+						"dev"
+					],
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://laravel5.5-direct-development.dev/api/v1/forgot_password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "cxzhao@deepnorth.cn",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel5.5-direct-development.dev/api/v1/forgot_password",
+					"protocol": "http",
+					"host": [
+						"laravel5",
+						"5-direct-development",
+						"dev"
+					],
+					"path": [
+						"api",
+						"v1",
+						"forgot_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://laravel5.5-direct-development.dev/api/v1/reset_password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "cxzhao@deepnorth.cn",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "574264716f776c6e6f734542687a2b58624e4c6579413d3d",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel5.5-direct-development.dev/api/v1/reset_password",
+					"protocol": "http",
+					"host": [
+						"laravel5",
+						"5-direct-development",
+						"dev"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reset_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://laravel5.5-direct-development.dev/api/v1/logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://laravel5.5-direct-development.dev/api/v1/logout",
+					"protocol": "http",
+					"host": [
+						"laravel5",
+						"5-direct-development",
+						"dev"
+					],
+					"path": [
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

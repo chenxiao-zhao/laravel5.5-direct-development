@@ -10,6 +10,9 @@ sed -i "/^memory_limit/cmemory_limit = 512M" /etc/php/7.0/fpm/php.ini
 ## start php7.0-fpm
 service php7.0-fpm start
 
+service cron start
+crontab /var/www/laravel5.5-direct-development/root
+
 if [ "$DB_HOST" = "" ]
 then
   echo "error:mysql host needed.please export DB_HOST before install."
@@ -45,32 +48,39 @@ else
     sed -i "/^DB_PORT/cDB_PORT=${DB_PORT}" /var/www/laravel5.5-direct-development/.env
 fi
 
-if [ "$AZURE_ACCOUNT_NAME" = "" ]
+if [ "$MONGO_HOST" = "" ]
 then
-  echo "warning:please export AZURE_ACCOUNT_NAME before install if you want to configure it."
+  echo "error:mongo host needed.please export MONGO_HOST before install."
 else
-    sed -i "/^AZURE_ACCOUNT_NAME/cAZURE_ACCOUNT_NAME=${AZURE_ACCOUNT_NAME}" /var/www/laravel5.5-direct-development/.env
+    sed -i "/^MONGO_HOST/cMONGO_HOST=${MONGO_HOST}" /var/www/laravel5.5-direct-development/.env
 fi
 
-if [ "$AZURE_ACCOUNT_KEY" = "" ]
+if [ "$MONGO_PORT" = "" ]
 then
-  echo "warning:please export AZURE_ACCOUNT_KEY before install if you want to configure it."
+  echo "warning:use default mongo port 27017.please export MONGO_PORT before install if you want to configure it."
 else
-    sed -i "/^AZURE_ACCOUNT_KEY/cAZURE_ACCOUNT_KEY=${AZURE_ACCOUNT_KEY}" /var/www/laravel5.5-direct-development/.env
+    sed -i "/^MONGO_PORT/cMONGO_PORT=${MONGO_PORT}" /var/www/laravel5.5-direct-development/.env
 fi
 
-if [ "$AZURE_CONTAINER_NAME" = "" ]
+if [ "$MONGO_DATABASE" = "" ]
 then
-  echo "warning:please export AZURE_CONTAINER_NAME before install if you want to configure it."
+  echo "error:mongo database name needed.please export MONGO_DATABASE before install."
 else
-    sed -i "/^AZURE_CONTAINER_NAME/cAZURE_CONTAINER_NAME=${AZURE_CONTAINER_NAME}" /var/www/laravel5.5-direct-development/.env
+    sed -i "/^MONGO_DATABASE/cMONGO_DATABASE=${MONGO_DATABASE}" /var/www/laravel5.5-direct-development/.env
 fi
 
-if [ "$AZURE_FILE_CLOUD_PATH" = "" ]
+if [ "$MONGO_USERNAME" = "" ]
 then
-  echo "warning:please export AZURE_FILE_CLOUD_PATH before install if you want to configure it."
+  echo "error:mongo user name needed.please export MONGO_USERNAME before install."
 else
-    sed -i "/^AZURE_FILE_CLOUD_PATH/cAZURE_FILE_CLOUD_PATH=${AZURE_FILE_CLOUD_PATH}" /var/www/laravel5.5-direct-development/.env
+    sed -i "/^MONGO_USERNAME/cMONGO_USERNAME=${MONGO_USERNAME}" /var/www/laravel5.5-direct-development/.env
+fi
+
+if [ "$MONGO_PASSWORD" = "" ]
+then
+  echo "error:mongo password needed.please export MONGO_PASSWORD before install."
+else
+    sed -i "/^MONGO_PASSWORD/cMONGO_PASSWORD=${MONGO_PASSWORD}" /var/www/laravel5.5-direct-development/.env
 fi
 
 if [ "$JWT_TTL" = "" ]

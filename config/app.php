@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -175,6 +175,7 @@ return [
         //Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Reliese\Coders\CodersServiceProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -233,6 +234,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Moloquent' => Jenssegers\Mongodb\Eloquent\Model::class,
+        'Mongo'     => Jenssegers\Mongodb\MongodbServiceProvider::class,
     ],
 
 ];
