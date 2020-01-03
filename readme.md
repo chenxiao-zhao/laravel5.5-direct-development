@@ -101,5 +101,5 @@ $ docker rm -f ${container_id}
 
 | Version | Description                                             |  Date        |
 |---------|---------------------------------------------------------|--------------|
-| v0.1    |Initial Release with Account API, Data API   |  2018-10-26  |
+| v0.1    |Initial Release with Account API, Data API               |  2018-10-26  |
 |         |                                                         |              |
