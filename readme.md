@@ -1,7 +1,7 @@
 # **laravel5.5-direct-development**
 ------
 
-The laravel5.5-direct-development provides API services for the corresponding swedavia-airport-web.
+The laravel5.5-direct-development provides API services.
 
 ## Features and design
 
