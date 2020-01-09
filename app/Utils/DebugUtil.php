@@ -11,6 +11,12 @@ class DebugUtil
         return $different;
     }
 
+    public static function microtime_different($microtime1, $microtime2)
+    {
+        $different = self::microtime_float($microtime2) - self::microtime_float($microtime1);
+        return $different;
+    }
+
     public static function microtime_float($microtime = null)
     {
         $microtime = empty($microtime) ? microtime() : $microtime;
