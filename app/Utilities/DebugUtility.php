@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Utils;
+namespace App\Utilities;
 
-class DebugUtil
+class DebugUtility
 {
 
     public static function time_different($time1, $time2)

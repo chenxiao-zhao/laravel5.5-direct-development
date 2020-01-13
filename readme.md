@@ -48,14 +48,14 @@ $ sudo docker run -d --restart always \
     -p 443:443 \
     -v /etc/localtime:/etc/localtime \
     -v /etc/timezone:/etc/timezone \
-    -e 'DB_HOST=52.162.166.103' \
+    -e 'DB_HOST=172.17.0.1' \
     -e 'DB_PORT=3306' \
-    -e 'DB_DATABASE=dashboard_v1_01' \
-    -e 'DB_USERNAME=vmaxx' \
-    -e 'DB_PASSWORD=555a682b426a6a305839526231514e4a79734a3272413d3d' \
+    -e 'DB_DATABASE=laravel5.5-direct-development' \
+    -e 'DB_USERNAME=root' \
+    -e 'DB_PASSWORD=6f62466245373550732b795a764a7170543734414b413d3d' \
     -e 'MONGO_HOST=127.17.0.1' \
     -e 'MONGO_PORT=27017' \
-    -e 'MONGO_DATABASE=homestead' \
+    -e 'MONGO_DATABASE=laravel5.5-direct-development' \
     -e 'MONGO_USERNAME=homestead' \
     -e 'MONGO_PASSWORD=secret' \
     --name laravel5.5-direct-development \

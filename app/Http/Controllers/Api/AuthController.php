@@ -94,7 +94,7 @@ class AuthController extends Controller
             $time_stamp = time() + 3600;
             $AesService = new AesService();
             $token = $AesService->encryption($time_stamp);
-            $body = "请在一小时有效时间内打开链接，进入页面找回密码 " . \App\Utils\UrlUtil::getClientDomain() . "/#/resetPassword?&email=" . $send_mail_address . '&token=' . $token;
+            $body = "请在一小时有效时间内打开链接，进入页面找回密码 " . \App\Utilities\UrlUtility::getClientDomain() . "/#/resetPassword?&email=" . $send_mail_address . '&token=' . $token;
 
             $SendgridMailController = new SendgridMailController;
             $SendgridMailController->send($send_mail_address, $subject, $body);
